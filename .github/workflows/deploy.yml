@@ -33,18 +33,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Check output directory
-        run: |
-          echo "Checking for out directory..."
-          ls -la
-          if [ -d "out" ]; then
-            echo "✓ out directory exists"
-            ls -la out/ | head -20
-          else
-            echo "✗ out directory not found"
-            exit 1
-          fi
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
