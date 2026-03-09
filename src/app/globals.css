@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme inline {
+    --color-primary: #f5a623;
+    --color-primary-dark: #e09000;
+    --color-accent: #2c5f2d;
+    --color-accent-light: #3a7d3c;
+    --font-sans: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: #333;
+    background: #fff;
+}
