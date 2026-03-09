@@ -33,14 +33,14 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Debug - Build status
-        run: echo "Build completed, checking out directory"
+      - name: Debug - Build completed
+        run: echo "Build completed, checking for out directory"
 
-      - name: Debug - List directory contents
+      - name: Debug - List root directory
         run: ls -la
 
       - name: Debug - Check out directory
-        run: ls -la out/
+        run: ls -la out/ || echo "out directory not found"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
