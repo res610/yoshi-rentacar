@@ -67,9 +67,15 @@ export const metadata: Metadata = {
     },
     icons: {
         icon: [
-            { url: `${basePath}/images/logo.png`, type: "image/png" },
+            { url: `${basePath}/favicon.ico`, sizes: "48x48" },
+            { url: `${basePath}/favicon-32x32.png`, sizes: "32x32", type: "image/png" },
+            { url: `${basePath}/favicon-16x16.png`, sizes: "16x16", type: "image/png" },
+        ],
+        apple: [
+            { url: `${basePath}/apple-touch-icon.png`, sizes: "180x180", type: "image/png" },
         ],
     },
+    manifest: `${basePath}/site.webmanifest`,
     verification: {
         // Google Search Console verification (add your verification code here)
         // google: "your-verification-code",

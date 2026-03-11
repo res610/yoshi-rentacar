@@ -22,7 +22,7 @@ export default function Header() {
                 <div className="flex justify-between items-center">
                     <a href="#" className="flex items-center gap-3">
                         <img
-                            src={`${basePath}/images/logo.png`}
+                            src={`${basePath}/images/logo.webp`}
                             alt={STORE_NAME}
                             className="h-10 w-10 rounded-full object-cover"
                         />

@@ -42,7 +42,7 @@ export default function Home() {
                 <div className="max-w-4xl mx-auto px-4">
                     <a href={LP_URL} target="_blank" rel="noopener noreferrer" className="block">
                         <img
-                            src={`${basePath}/images/lp-banner.png`}
+                            src={`${basePath}/images/lp-banner.webp`}
                             alt="沖縄旅行ならヨシレンタカー - 詳細はこちら"
                             className="w-full rounded-lg shadow-md hover:shadow-lg transition"
                         />

@@ -4,32 +4,32 @@ const vehicles = [
     {
         name: "25～29人乗りマイクロバス",
         price: "30,000",
-        image: `${basePath}/images/microbus.png`,
+        image: `${basePath}/images/microbus.webp`,
         description: "沖縄での団体旅行や送迎、イベント利用に多く使われているマイクロバスレンタカーです。",
         badge: "県民割引あり",
     },
     {
         name: "10人乗りハイエース",
         price: "15,000",
-        image: `${basePath}/images/hiace.png`,
+        image: `${basePath}/images/hiace.webp`,
         description: "ビジネス利用や大人数の移動に適したハイエースです。",
     },
     {
         name: "1BOX車",
         price: "8,000",
-        image: `${basePath}/images/onebox.png`,
+        image: `${basePath}/images/onebox.webp`,
         description: "ファミリーやグループ旅行に最適な1BOX車です。",
     },
     {
         name: "普通車",
         price: "6,000",
-        image: `${basePath}/images/compact.png`,
+        image: `${basePath}/images/compact.webp`,
         description: "沖縄観光やビジネスに便利な普通車です。",
     },
     {
         name: "軽自動車",
         price: "5,000",
-        image: `${basePath}/images/kei.png`,
+        image: `${basePath}/images/kei.webp`,
         description: "沖縄滞在や日常利用に最適な軽自動車です。",
     },
 ];

@@ -10,7 +10,7 @@ export default function Footer() {
                     <div>
                         <div className="flex items-center gap-3 mb-4">
                             <img
-                                src={`${basePath}/images/logo.png`}
+                                src={`${basePath}/images/logo.webp`}
                                 alt={STORE_NAME}
                                 className="h-8 w-8 rounded-full object-cover"
                             />
