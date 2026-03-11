@@ -5,11 +5,12 @@ const path = require('path');
 const isDev = process.env.NODE_ENV === 'development';
 
 // ─── ドメイン移行時はここだけ変更 ───
-const SITE_DOMAIN = 'yoshi-rentacar.jp';
-const SITE_BASE_PATH = '';
-// GitHub Pages（独自ドメイン移行前）:
-//   const SITE_DOMAIN = 'res610.github.io';
-//   const SITE_BASE_PATH = '/yoshi-rentacar';
+// 独自ドメイン移行後:
+//   const SITE_DOMAIN = 'yoshi-rentacar.jp';
+//   const SITE_BASE_PATH = '';
+// GitHub Pages:
+const SITE_DOMAIN = 'res610.github.io';
+const SITE_BASE_PATH = '/yoshi-rentacar';
 // ────────────────────────────────────
 
 const basePath = isDev ? '' : SITE_BASE_PATH;
