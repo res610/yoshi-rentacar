@@ -63,17 +63,59 @@ export default function PriceSection() {
                     ))}
                 </div>
 
+                {/* 重要：料金計算方法 */}
+                <div className="mt-10 bg-red-50 border-2 border-red-400 rounded-xl p-6">
+                    <h3 className="text-lg font-bold text-red-600 mb-3 flex items-center gap-2">
+                        <span className="text-xl">⚠</span>
+                        重要｜レンタル料金の計算方法について
+                    </h3>
+                    <p className="text-red-700 font-bold mb-2">
+                        当社のレンタカー料金における「1日」は、24時間制ではありません。
+                    </p>
+                    <p className="text-red-700 font-bold mb-3">
+                        レンタル開始日と返却日が異なる場合は、利用時間に関わらず「2日分」の料金が発生します。
+                    </p>
+                    <div className="bg-white rounded-lg p-4 text-sm text-gray-700">
+                        <p className="font-bold mb-1">【例】</p>
+                        <p>1月9日 11:00 にレンタル → 1月10日 9:00 に返却</p>
+                        <p className="font-bold text-red-600 mt-1">→ 2日分の料金となります</p>
+                    </div>
+                </div>
+
                 {/* 注意事項 */}
-                <div className="mt-10 bg-white rounded-xl shadow p-6">
+                <div className="mt-6 bg-white rounded-xl shadow p-6">
                     <h3 className="text-lg font-bold text-gray-900 mb-4">注意事項</h3>
-                    <ul className="space-y-2 text-sm text-gray-700">
-                        <li>・ペット・喫煙禁止 ※違反した場合、清掃料として損害賠償（15万円）を返却時に請求いたします。</li>
-                        <li>・満タン返し ※給油は返却地点から3km付近をご利用ください。時間厳守でお願いいたします。</li>
-                        <li>・チャイルドシート ＋1,100円/台</li>
-                        <li>・返却延滞 20時まで ＋1,100円/時</li>
-                        <li>・20時以降は翌日分レンタル料が発生 ※営業時間は20:00までです。</li>
-                        <li>・シーズンにより料金変動あり</li>
-                        <li>・<strong>レンタル料金は日付単位で計算されます。</strong>時間貸し・24時間制ではありません。</li>
+                    <ul className="space-y-3 text-sm text-gray-700">
+                        <li className="flex gap-2">
+                            <span className="text-red-500 font-bold shrink-0">●</span>
+                            <span>
+                                <strong>ペット・喫煙禁止</strong><br />
+                                違反した場合、清掃料として損害賠償（15万円）を返却時に請求いたします。
+                            </span>
+                        </li>
+                        <li className="flex gap-2">
+                            <span className="text-red-500 font-bold shrink-0">●</span>
+                            <span>
+                                <strong>満タン返し</strong><br />
+                                給油は返却地点から3km付近をご利用ください。時間厳守でお願いいたします。
+                            </span>
+                        </li>
+                        <li className="flex gap-2">
+                            <span className="text-gray-400 font-bold shrink-0">●</span>
+                            <span>チャイルドシート ＋1,100円/台</span>
+                        </li>
+                        <li className="flex gap-2">
+                            <span className="text-gray-400 font-bold shrink-0">●</span>
+                            <span>
+                                <strong>返却延滞</strong><br />
+                                20時まで ＋1,100円/時<br />
+                                20時以降は翌日分のレンタル料が発生 ※営業時間は20:00までです。
+                            </span>
+                        </li>
+                        <li className="flex gap-2">
+                            <span className="text-gray-400 font-bold shrink-0">●</span>
+                            <span>シーズンにより料金変動あり</span>
+                        </li>
                     </ul>
                 </div>
             </div>
