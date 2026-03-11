@@ -7,10 +7,10 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const navItems = [
     { href: `${basePath}/microbus/`, label: "マイクロバス" },
-    { href: "#price", label: "料金表" },
-    { href: "#booking", label: "予約の流れ" },
-    { href: "#faq", label: "FAQ" },
-    { href: "#company", label: "会社情報" },
+    { href: `${basePath}/#price`, label: "料金表" },
+    { href: `${basePath}/#booking`, label: "予約の流れ" },
+    { href: `${basePath}/#faq`, label: "FAQ" },
+    { href: `${basePath}/#company`, label: "会社情報" },
 ];
 
 export default function Header() {
