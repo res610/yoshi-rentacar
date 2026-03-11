@@ -12,14 +12,16 @@ export default function BookingSection() {
         <section id="booking" className="py-12 md:py-16 bg-white">
             <div className="max-w-4xl mx-auto px-4">
                 <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">予約の流れ</h2>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {bookingSteps.map((s) => (
-                        <div key={s.step} className="text-center">
-                            <div className="w-14 h-14 bg-[#ffd700] text-gray-900 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                                {s.step}
+                        <div key={s.step} className="bg-gray-50 rounded-xl p-4">
+                            <div className="flex items-center gap-3 mb-2">
+                                <span className="w-8 h-8 bg-[#ffd700] text-gray-900 rounded-full flex items-center justify-center text-sm font-bold shrink-0">
+                                    {s.step}
+                                </span>
+                                <h3 className="text-base font-bold text-gray-900">{s.title}</h3>
                             </div>
-                            <h3 className="text-lg font-bold text-gray-900 mb-2">{s.title}</h3>
-                            <p className="text-sm text-gray-600">{s.description}</p>
+                            <p className="text-sm text-gray-600 pl-11">{s.description}</p>
                         </div>
                     ))}
                 </div>
