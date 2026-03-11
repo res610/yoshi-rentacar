@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { STORE_LATITUDE, STORE_LONGITUDE, LINE_URL } from "@/constants";
 
@@ -236,7 +237,19 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
                 />
             </head>
-            <body className="antialiased">{children}</body>
+            <body className="antialiased">
+                {children}
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-ET2JETVFJB"
+                    strategy="afterInteractive"
+                />
+                <Script id="ga4-init" strategy="afterInteractive">
+                    {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ET2JETVFJB');`}
+                </Script>
+            </body>
         </html>
     );
 }
