@@ -39,7 +39,7 @@ export default function PriceSection() {
         <section id="price" className="py-12 md:py-16 bg-gray-50">
             <div className="max-w-6xl mx-auto px-4">
                 <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
-                    沖縄マイクロバスレンタカーの料金表
+                    料金表
                 </h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {vehicles.map((v) => (
