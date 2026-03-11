@@ -6,9 +6,9 @@ import { STORE_NAME, STORE_TEL, LINE_URL } from '@/constants';
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const navItems = [
+    { href: `${basePath}/microbus/`, label: "マイクロバス" },
     { href: "#price", label: "料金表" },
     { href: "#booking", label: "予約の流れ" },
-    { href: "#delivery", label: "配車・受け渡し" },
     { href: "#faq", label: "FAQ" },
     { href: "#company", label: "会社情報" },
 ];

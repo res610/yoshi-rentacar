@@ -7,9 +7,12 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
-    title: "ヨシレンタカー｜沖縄マイクロバス・ハイエースレンタカー専門【格安】",
+    title: {
+        default: "ヨシレンタカー｜沖縄マイクロバス・ハイエースレンタカー専門【格安】",
+        template: "%s｜ヨシレンタカー",
+    },
     description:
-        "沖縄でマイクロバスレンタカー・ハイエースレンタカーをお探しなら、沖縄本島南部のヨシレンタカーへ。25〜29人乗りマイクロバス30,000円〜。観光旅行・社員旅行・団体旅行・空港送迎に。年中無休、LINE予約OK。",
+        "沖縄でマイクロバスレンタカー・ハイエースレンタカーをお探しなら、沖縄本島南部のヨシレンタカーへ。25〜29人乗りマイクロバスレンタル30,000円〜、10人乗りハイエース15,000円〜。格安で団体旅行・空港送迎に対応。年中無休、LINE予約OK。",
     keywords: [
         "沖縄 マイクロバス レンタカー",
         "沖縄 ハイエース レンタカー",
@@ -40,10 +43,10 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: `${siteUrl}/images/hero-pc.webp`,
+                url: `${siteUrl}/images/og-image.png`,
                 width: 1200,
                 height: 630,
-                alt: "沖縄旅行ならヨシレンタカー",
+                alt: "ヨシレンタカー｜沖縄マイクロバス・ハイエースレンタカー専門",
             },
         ],
     },
@@ -52,7 +55,7 @@ export const metadata: Metadata = {
         title: "ヨシレンタカー｜沖縄マイクロバス・ハイエースレンタカー専門",
         description:
             "沖縄でマイクロバスレンタカー・ハイエースレンタカーをお探しなら、ヨシレンタカーへ。格安で安心のレンタルサービス。",
-        images: [`${siteUrl}/images/hero-pc.webp`],
+        images: [`${siteUrl}/images/og-image.png`],
     },
     robots: {
         index: true,
@@ -87,6 +90,7 @@ const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "ヨシレンタカー",
+    alternateName: ["沖縄マイクロバスレンタカー ヨシレンタカー", "ヨッシーレンタカー", "ヨシノレンタカー"],
     description:
         "沖縄マイクロバスレンタカーを専門に提供。25〜29人乗りマイクロバス、ハイエース、1BOX車、普通車、軽自動車を格安で提供。観光旅行・社員旅行・団体旅行・空港送迎に対応。",
     url: siteUrl,
@@ -122,6 +126,11 @@ const jsonLd = {
     },
     priceRange: "¥5,000〜¥30,000",
     areaServed: [
+        { "@type": "City", name: "八重瀬町" },
+        { "@type": "City", name: "那覇市" },
+        { "@type": "City", name: "糸満市" },
+        { "@type": "City", name: "南城市" },
+        { "@type": "City", name: "豊見城市" },
         { "@type": "State", name: "沖縄県" },
     ],
     sameAs: [
@@ -166,10 +175,42 @@ const faqJsonLd = {
     mainEntity: [
         {
             "@type": "Question",
+            name: "マイクロバスの運転に必要な免許は何ですか？",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "25〜29人乗りマイクロバスの運転には中型免許（8t限定なし）または大型免許が必要です。8t限定中型免許では運転できませんのでご注意ください。",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "配車・受け渡しはどこまで対応していますか？",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "沖縄本島全域で配車・受け渡しに対応しています。那覇空港や各ホテルへの配車も可能です。詳細はLINEまたはお電話でご相談ください。",
+            },
+        },
+        {
+            "@type": "Question",
             name: "24時間たっていないのに2日分になるのはなぜですか？",
             acceptedAnswer: {
                 "@type": "Answer",
                 text: "当社ではレンタカー料金を「日付単位」で計算しております。レンタル開始日と返却日が異なる場合は、利用時間に関わらず2日分の料金が発生します。例：1月9日 11:00にレンタル → 1月10日 9:00に返却 → 2日分の料金となります。",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "キャンセル料はかかりますか？",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "ご予約のキャンセルはお早めにご連絡ください。キャンセルポリシーの詳細はお問い合わせ時にご案内いたします。",
+            },
+        },
+        {
+            "@type": "Question",
+            name: "沖縄で格安のマイクロバスレンタカーはありますか？",
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: "ヨシレンタカーでは25〜29人乗りマイクロバスを1日30,000円（税抜）〜でご提供しています。沖縄県民割引もございます。観光旅行・社員旅行・団体旅行・空港送迎にご利用ください。",
             },
         },
     ],

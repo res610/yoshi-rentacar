@@ -22,6 +22,7 @@ const siteUrl = isDev
 const today = new Date().toISOString().split('T')[0];
 const sitemapPages = [
     { loc: '/', priority: '1.0', changefreq: 'weekly' },
+    { loc: '/microbus/', priority: '0.9', changefreq: 'weekly' },
 ];
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
